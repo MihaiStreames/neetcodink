@@ -5,5 +5,5 @@ class Solution:
         for s in strs:
             key = tuple(sorted(s))
             seen[key].append(s)
-            
+
         return list(seen.values())

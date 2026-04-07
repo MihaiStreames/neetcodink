@@ -7,7 +7,7 @@ class Solution:
             if char in matching:  # closing bracket
                 if not stack:
                     return False
-                
+
                 top = stack.pop()
                 if top != matching[char]:
                     return False

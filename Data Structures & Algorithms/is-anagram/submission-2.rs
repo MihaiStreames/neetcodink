@@ -13,7 +13,7 @@ impl Solution {
         for c in t.bytes() {
             let idx = (c - b'a') as usize;
             count[idx] -= 1;
-            
+
             if count[idx] < 0 {
                 return false;
             }

@@ -16,7 +16,7 @@ public:
 			int w = right - left;
 			int h = min(heights[left], heights[right]);
 			area = max(area, w * h);
-            
+
 			if (heights[left] < heights[right]) {
 				left++;
 			} else {

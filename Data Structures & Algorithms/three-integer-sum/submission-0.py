@@ -9,7 +9,7 @@ class Solution:
                 continue
 
             left, right = i + 1, len(nums) - 1
-            
+
             while left < right:
                 triplet = nums[i], nums[left], nums[right]
 
