@@ -1,0 +1,17 @@
+name: Cleanup old submissions
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Remove old same-language submissions
+        run: .github/workflows/scripts/cleanup-submissions.sh
