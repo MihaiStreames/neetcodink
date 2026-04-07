@@ -1,0 +1,23 @@
+name: Pre-commit autofix
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - run: pip install pre-commit
+
+      - name: Run pre-commit and commit fixes
+        run: .github/workflows/scripts/pre-commit-autofix.sh
