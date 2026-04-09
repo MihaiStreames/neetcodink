@@ -4,7 +4,7 @@ class Solution:
 
         if head:
             curr = head
-            
+
             while curr is not None:
                 right = curr.next
                 curr.next = prev
